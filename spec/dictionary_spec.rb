@@ -34,4 +34,11 @@ describe 'Term' do
     expect(Term.all).to match_array([new_term, new_term2])
   end
 
+  it "searches for a term according to the word" do
+    new_term = Term.new("new", "shiny")
+    new_term2 = Term.new("dog", "pet")
+    expect(Term.search("new")).to eq [new_term]
+  end
+
+
 end

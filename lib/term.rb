@@ -18,6 +18,8 @@ class Term
     @@dictionary_list = []
   end
 
- 
+  def Term.search(word)
+    @@dictionary_list.select {|object| object.word == word}
+  end
 
 end 
