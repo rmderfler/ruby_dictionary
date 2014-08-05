@@ -1,6 +1,7 @@
 require 'rspec'
 require 'term'
 require 'definition'
+
 describe 'Term' do
 
   before do
