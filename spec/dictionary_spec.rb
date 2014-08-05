@@ -61,6 +61,10 @@ describe 'Definition' do
     expect(new_def).to be_an_instance_of Definition
   end
 
+  it "returns a definition" do
+    new_def = Definition.new("new")
+    expect(new_def.definition).to eq "new"
+  end
 
 end
 
