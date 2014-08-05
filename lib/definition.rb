@@ -11,5 +11,7 @@ def initialize (definition)
   @@definition_listings << self
 end 
 
-
+def self.all
+  @@definition_listings 
+end
 end

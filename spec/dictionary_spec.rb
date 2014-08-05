@@ -65,7 +65,11 @@ describe 'Definition' do
     new_def = Definition.new("new")
     expect(new_def.definition).to eq "new"
   end
-
+  it "returns a list of all the definitions" do
+    new_def = Definition.new("new")
+    new_def2 = Definition.new("old")
+    expect(Definition.all).to match_array([new_def, new_def2])
+  end
 end
 
 
