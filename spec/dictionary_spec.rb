@@ -87,6 +87,12 @@ describe 'Definition' do
     expect(Definition.find_definition("new")).to eq [new_def]
   end
 
+  it "combines definitions" do
+    def1 = Definition.new("new")
+    def2 = Definition.new("old")
+    expect(Definition.combine_definitions(def1,def2)).to match_array(["new", "old"])
+  end
+
 end
 
 

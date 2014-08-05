@@ -22,4 +22,9 @@ end
 def self.find_definition (word)
   @@definition_listings.select {|object| object.definition == word }  
 end
+
+def Definition.combine_definitions (def1, def2)
+  def1.definition_array.concat(def2.definition_array)
+end
+
 end
