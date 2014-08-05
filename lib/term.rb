@@ -25,5 +25,13 @@ class Term
    def new_definition(new_definition)
     @definition = new_definition
   end
+
+   def Term.delete_term(term)
+    @@dictionary_list.each do |object|
+      if object == term
+        self.all.delete(object)
+      end
+    end
+  end
   
 end 

@@ -46,5 +46,13 @@ describe 'Term' do
     expect(new_term.definition).to eq("modern")
   end
 
+  it "lets user delete a term with help from the search method" do
+    new_term = Term.new("new", "shiny")
+    search = Term.search("new")
+    Term.delete_term(search[0])
+    expect(Term.all).to match_array([])
+  end
+
+
 
 end
