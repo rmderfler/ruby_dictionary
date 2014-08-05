@@ -28,5 +28,10 @@ describe 'Term' do
     expect(Term.clear).to eq([])
   end
 
+  it "returns a list of all the terms" do
+    new_term = Term.new("new", "shiny")
+    new_term2 = Term.new("dog", "pet")
+    expect(Term.all).to match_array([new_term, new_term2])
+  end
 
 end

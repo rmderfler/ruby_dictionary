@@ -18,4 +18,6 @@ class Term
     @@dictionary_list = []
   end
 
+ 
+
 end 
