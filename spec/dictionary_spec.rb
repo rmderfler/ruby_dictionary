@@ -1,6 +1,6 @@
 require 'rspec'
 require 'term'
-
+require 'definition'
 describe 'Term' do
 
   before do
@@ -52,7 +52,22 @@ describe 'Term' do
     Term.delete_term(search[0])
     expect(Term.all).to match_array([])
   end
+end
 
+describe 'Definition' do
+
+  it 'initializes a new definition' do
+    new_def = Definition.new("new")
+    expect(new_def).to be_an_instance_of Definition
+  end
 
 
 end
+
+
+
+
+
+
+
+
