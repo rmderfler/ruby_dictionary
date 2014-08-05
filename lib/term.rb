@@ -12,4 +12,6 @@ class Term
 
   def Term.all   
     @@dictionary_list 
-  end  
+  end 
+
+end 
