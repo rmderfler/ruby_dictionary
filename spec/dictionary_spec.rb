@@ -40,5 +40,11 @@ describe 'Term' do
     expect(Term.search("new")).to eq [new_term]
   end
 
+  it 'lets user change a definition' do
+    new_term = Term.new("new", "shiny")
+    new_term.new_definition("modern")
+    expect(new_term.definition).to eq("modern")
+  end
+
 
 end

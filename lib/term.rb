@@ -22,4 +22,8 @@ class Term
     @@dictionary_list.select {|object| object.word == word}
   end
 
+   def new_definition(new_definition)
+    @definition = new_definition
+  end
+  
 end 
