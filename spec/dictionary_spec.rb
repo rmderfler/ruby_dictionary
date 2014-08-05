@@ -81,6 +81,12 @@ describe 'Definition' do
     expect(Definition.clear).to eq([])
   end
 
+  it "searches for a definition" do
+    new_def = Definition.new("new")
+    new_def2 = Definition.new("old")
+    expect(Definition.find_definition("new")).to eq [new_def]
+  end
+
 end
 
 

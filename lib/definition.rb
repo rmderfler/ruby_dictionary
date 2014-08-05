@@ -19,4 +19,7 @@ def self.clear
   @@definition_listings = []
 end
 
+def self.find_definition (word)
+  @@definition_listings.select {|object| object.definition == word }  
+end
 end
