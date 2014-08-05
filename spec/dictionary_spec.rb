@@ -56,6 +56,10 @@ end
 
 describe 'Definition' do
 
+  before do
+    Definition.clear
+  end
+
   it 'initializes a new definition' do
     new_def = Definition.new("new")
     expect(new_def).to be_an_instance_of Definition
@@ -70,6 +74,13 @@ describe 'Definition' do
     new_def2 = Definition.new("old")
     expect(Definition.all).to match_array([new_def, new_def2])
   end
+
+  it "clears the list of definitions" do
+    new_def = Definition.new("new")
+    new_def2 = Definition.new("old")
+    expect(Definition.clear).to eq([])
+  end
+
 end
 
 

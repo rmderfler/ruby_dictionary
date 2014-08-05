@@ -14,4 +14,9 @@ end
 def self.all
   @@definition_listings 
 end
+
+def self.clear
+  @@definition_listings = []
+end
+
 end
