@@ -12,6 +12,10 @@ class Term
 
   def Term.all   
     @@dictionary_list 
-  end 
+  end
+
+  def Term.clear
+    @@dictionary_list = []
+  end
 
 end 

@@ -3,6 +3,10 @@ require 'term'
 
 describe 'Term' do
 
+  before do
+    Term.clear
+  end
+
   it 'initializes a new term' do
     new_term = Term.new("new", "shiny")
     expect(new_term).to be_an_instance_of Term
@@ -18,6 +22,11 @@ describe 'Term' do
     expect(new_term.definition).to eq "shiny"
   end
 
+  it "clears the list of terms" do
+    new_term = Term.new("new", "shiny")
+    new_term2 = Term.new("dog", "pet")
+    expect(Term.clear).to eq([])
+  end
 
 
 end
